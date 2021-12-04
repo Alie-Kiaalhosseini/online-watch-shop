@@ -102,37 +102,39 @@ height: 20em;
 /* animation */
 
 .animations{
-    height: 30px;
-    padding: 0.2em 0.3em;
-    width: 1.5em;
-    border-radius: 30%;
-    background-color: rgb(14, 161, 14);
-    color: #fff;
-    transition: width 1s;
+    position: relative;
+    /* color: #fff; */
     direction: ltr;
-    /* position: fixed; */
-    transition-timing-function: ease;
+    float: left;
+    margin-left: 0.3em;
 }
 .spn{
-    display: inline-block;
-    position: relative;
-    top: -25px;
+  display: none;
     color: #fff;
-    z-index: -1;
-    opacity: 0;
-}
-.animations:hover{
-    width: 55px;
+    transition: all 0.5s ease-out;
 }
 .c-icon{
+    background-color: rgb(14, 161, 14);
+    cursor: pointer;
+    padding: 0.28em;
+    border-radius: 42px;
     color: #fff;
-    float: right;
-    /* position: fixed; */
+    transition: all 0.5s ease-out;
 }
-.animations:hover .spn{
+.animations .c-icon:hover .spn{
+   display: inline;
+   -webkit-animation: fadeIn 1.5s;
+   animation: fadeIn 1.5s;
+   transition: all 0.5s ease-out;
+}
+@-webkit-keyframes fadeIn {
+from {
+    opacity: 0.9;
+  }
+
+  to {
     opacity: 1;
-    z-index: 1;
-    left: 5px;
+  }
 }
 
 /* Footer */
